@@ -1,0 +1,43 @@
+.navbar {
+  // padding: 0 30px;
+}
+
+.desktop-navigation {
+  // display: flex !important;
+}
+
+.tablet-navigation {
+  display: none !important;
+}
+
+.mobile-navigation {
+  display: none !important;
+}
+
+@media screen and (max-width: 820px) {
+  .desktop-navigation {
+    display: none !important;
+  }
+
+  .tablet-navigation {
+    display: flex !important;
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .desktop-navigation {
+    display: none !important;
+  }
+
+  .tablet-navigation {
+    display: none !important;
+  }
+
+  .mobile-navigation {
+    display: flex !important;
+  }
+}
