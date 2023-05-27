@@ -1,3 +1,4 @@
+import "./RootLayout.scss";
 import Navbar from "../../containers/navbar/Navbar";
 import { Outlet } from "react-router-dom";
 
@@ -6,7 +7,7 @@ const RootLayout = () => {
     <div className="root-layout">
       <Navbar />
 
-      <main>
+      <main className="main">
         <Outlet />
       </main>
     </div>

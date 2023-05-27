@@ -2,17 +2,18 @@ import "./Carousel.scss";
 import CarouselHeader from "./carouselHeader/CarouselHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
-import { Link } from "react-router-dom";
 import MovieCard from "../movieCard/MovieCard";
 
 interface CarouselPropTypes {
   data: any[];
+  carouselHeader: string;
+  link: string;
 }
 
-const Carousel = ({ data }: CarouselPropTypes) => {
+const Carousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
   return (
-    <div className="carousel">
-      <CarouselHeader />
+    <section className="carousel">
+      <CarouselHeader carouselHeader={carouselHeader} link={link} />
 
       <div className="carousel__slide">
         <Swiper
@@ -50,7 +51,7 @@ const Carousel = ({ data }: CarouselPropTypes) => {
             ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

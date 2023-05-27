@@ -3,6 +3,7 @@ import "./SideMenu.scss";
 import { NavLink } from "react-router-dom";
 import { RiCompassDiscoverFill, RiCompassDiscoverLine } from "react-icons/ri";
 import {
+  AiOutlineHome,
   AiFillFire,
   AiOutlineFire,
   AiOutlineAreaChart,
@@ -14,8 +15,13 @@ import {
 const SideMenu = () => {
   const navLinks = [
     {
-      name: "discover",
+      name: "home",
       to: "/",
+      icon: <AiOutlineHome />,
+    },
+    {
+      name: "discover",
+      to: "/discover",
       icon: <RiCompassDiscoverLine />,
     },
     {

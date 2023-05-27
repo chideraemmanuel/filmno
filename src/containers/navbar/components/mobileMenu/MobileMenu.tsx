@@ -4,6 +4,7 @@ import { RiCloseFill, RiMenu4Line } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import { RiCompassDiscoverFill, RiCompassDiscoverLine } from "react-icons/ri";
 import {
+  AiOutlineHome,
   AiFillFire,
   AiOutlineFire,
   AiOutlineAreaChart,
@@ -17,8 +18,13 @@ const mobileMenuActive = false;
 const MobileMenu = () => {
   const navLinks = [
     {
-      name: "discover",
+      name: "home",
       to: "/",
+      icon: <AiOutlineHome />,
+    },
+    {
+      name: "discover",
+      to: "/discover",
       icon: <RiCompassDiscoverLine />,
     },
     {
