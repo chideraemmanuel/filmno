@@ -12,10 +12,12 @@ import {
   AiFillCalendar,
   AiOutlineCalendar,
 } from "react-icons/ai";
-
-const mobileMenuActive = false;
+import { useContext } from "react";
+import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
 
 const MobileMenu = () => {
+  const { isMenuOpen, setIsMenuOpen } = useContext(mobileMenuContext);
+
   const navLinks = [
     {
       name: "home",
@@ -48,14 +50,13 @@ const MobileMenu = () => {
     <>
       <div
         className={
-          mobileMenuActive
-            ? "mobile-menu-overlay active"
-            : "mobile-menu-overlay"
+          isMenuOpen ? "mobile-menu-overlay active" : "mobile-menu-overlay"
         }
+        onClick={() => setIsMenuOpen(false)}
       ></div>
-      <div className={mobileMenuActive ? "mobile-menu active" : "mobile-menu"}>
+      <div className={isMenuOpen ? "mobile-menu active" : "mobile-menu"}>
         <div className="mobile-menu__header">
-          <RiCloseFill />
+          <RiCloseFill onClick={() => setIsMenuOpen(false)} />
           <Logo />
         </div>
 

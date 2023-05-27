@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import Logo from "../../../../components/logo/Logo";
 import ThemeToggle from "../../../../components/themeToggle/ThemeToggle";
 import "./TabletNavigation.scss";
@@ -6,17 +7,20 @@ import { RiMenu4Fill, RiMenu4Line } from "react-icons/ri";
 import { FiUserPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import MobileMenu from "../mobileMenu/MobileMenu";
+import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
 
 const isLoggedIn = false;
 
 const TabletNavigation = () => {
+  const { isMenuOpen, setIsMenuOpen } = useContext(mobileMenuContext);
+
   return (
     <div className="tablet-navigation">
       <MobileMenu />
 
       <div className="tablet-navigation__header">
         <div className="tablet-navigation__header--left">
-          <RiMenu4Fill />
+          <RiMenu4Fill onClick={() => setIsMenuOpen(true)} />
           <Logo />
         </div>
 

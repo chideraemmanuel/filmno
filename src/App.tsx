@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import "./App.scss";
 import {
   RouterProvider,
@@ -13,8 +14,11 @@ import "swiper/css/pagination";
 import RootLayout from "./layouts/rootLayout/RootLayout.tsx";
 import Homepage from "./pages/homepage/Homepage.tsx";
 import DiscoverPage from "./pages/discoverPage/DiscoverPage.tsx";
+import { themeContext } from "./contexts/themeContext.tsx";
 
 const App = () => {
+  const { theme, setTheme } = useContext(themeContext);
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
@@ -25,7 +29,7 @@ const App = () => {
   );
 
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <RouterProvider router={router} />
     </div>
   );
