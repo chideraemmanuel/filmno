@@ -10,9 +10,12 @@ export const SearchContextProvider = ({
   children,
 }: SearchContextProviderPropTypes) => {
   const [isSearchActive, setIsSearchActive] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
-    <searchContext.Provider value={{ isSearchActive, setIsSearchActive }}>
+    <searchContext.Provider
+      value={{ isSearchActive, setIsSearchActive, searchTerm, setSearchTerm }}
+    >
       {children}
     </searchContext.Provider>
   );
