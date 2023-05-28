@@ -22,13 +22,13 @@
     height: 80px;
     background-color: var(--secondary-color);
     // backdrop-filter: blur(10px);
-    box-shadow: 0 5px 5px rgba($color: #000000, $alpha: 0.1);
+    box-shadow: 0 5px 5px var(--box-shadow-color);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 30px;
-    border-bottom: 1px solid var(--grey);
+    // border-bottom: 1px solid var(--grey);
     z-index: 10;
 
     &--search {
@@ -67,17 +67,17 @@
       }
     }
 
-    &--account {
-      cursor: pointer;
-      font-size: 1.5rem;
-      // border: 1px solid var(--dark-grey);
-      // border-radius: 50%;
-      // padding: 5px 9px;
-      color: var(--primary-color);
-      background-color: rgba($color: #ad241b, $alpha: 0.1);
-      padding: 5px;
-      box-sizing: content-box;
-      border-radius: 3px;
-    }
+    // &--account {
+    //   cursor: pointer;
+    //   font-size: 1.5rem;
+    //   // border: 1px solid var(--dark-grey);
+    //   // border-radius: 50%;
+    //   // padding: 5px 9px;
+    //   color: var(--primary-color);
+    //   background-color: rgba($color: #ad241b, $alpha: 0.1);
+    //   padding: 5px;
+    //   box-sizing: content-box;
+    //   border-radius: 3px;
+    // }
   }
 }

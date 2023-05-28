@@ -1,4 +1,5 @@
 import ThemeToggle from "../../../../components/themeToggle/ThemeToggle";
+import User from "../../../../components/user/User";
 import SideMenu from "../sideMenu/SideMenu";
 import "./DesktopNavigation.scss";
 import { FaTrash, FaSearch, FaUser } from "react-icons/fa";
@@ -19,7 +20,7 @@ const DesktopNavigation = () => {
           <input type="text" placeholder="Search for movies" />
           <FaSearch />
         </form>
-
+        {/* 
         {isLoggedIn ? (
           <div className="desktop-navigation__header--account">
             <span>CE</span>
@@ -28,7 +29,8 @@ const DesktopNavigation = () => {
           <Link to="/account" className="desktop-navigation__header--account">
             <FiUserPlus />
           </Link>
-        )}
+        )} */}
+        <User />
       </div>
     </div>
   );

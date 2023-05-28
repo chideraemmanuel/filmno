@@ -10,6 +10,7 @@ import ThemeToggle from "../../../../components/themeToggle/ThemeToggle";
 import MobileSearch from "../mobileSearch/MobileSearch";
 import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
 import { searchContext } from "../../../../contexts/searchContext";
+import User from "../../../../components/user/User";
 
 const isLoggedIn = false;
 const searchActive = false;
@@ -36,18 +37,7 @@ const MobileNavigation = () => {
               <div className="mobile-navigation__header--right">
                 <FaSearch onClick={() => setIsSearchActive(true)} />
                 <ThemeToggle />
-                {isLoggedIn ? (
-                  <div className="mobile-navigation__header--right_account">
-                    <span>CE</span>
-                  </div>
-                ) : (
-                  <Link
-                    to="/account"
-                    className="mobile-navigation__header--right_account"
-                  >
-                    <FiUserPlus />
-                  </Link>
-                )}
+                <User />
               </div>
             </>
           )}

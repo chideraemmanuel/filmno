@@ -2,13 +2,13 @@ import MovieCard from "../../components/movieCard/MovieCard";
 import "./CardGrid.scss";
 
 interface CardGridPropTypes {
-  data: any[];
+  data: any[] | null | [];
 }
 
 const CardGrid = ({ data }: CardGridPropTypes) => {
   return (
     <section className="card-grid">
-      {data.map((item) => (
+      {data?.map((item) => (
         <MovieCard {...item} />
       ))}
     </section>

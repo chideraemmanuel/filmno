@@ -8,6 +8,7 @@ import { FiUserPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
+import User from "../../../../components/user/User";
 
 const isLoggedIn = false;
 
@@ -31,18 +32,7 @@ const TabletNavigation = () => {
 
         <div className="tablet-navigation__header--right">
           <ThemeToggle />
-          {isLoggedIn ? (
-            <div className="tablet-navigation__header--right_account">
-              <span>CE</span>
-            </div>
-          ) : (
-            <Link
-              to="/account"
-              className="tablet-navigation__header--right_account"
-            >
-              <FiUserPlus />
-            </Link>
-          )}
+          <User />
         </div>
       </div>
     </div>
