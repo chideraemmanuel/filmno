@@ -1,0 +1,19 @@
+.rating {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 3px;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 5px 7px;
+  border-radius: 5px;
+  font-size: 1rem;
+
+  @media screen and (max-width: 820px) {
+    font-size: 0.95rem;
+  }
+
+  @media screen and (max-width: 540px) {
+    font-size: 0.9rem;
+  }
+}

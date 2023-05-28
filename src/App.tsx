@@ -15,6 +15,7 @@ import RootLayout from "./layouts/rootLayout/RootLayout.tsx";
 import Homepage from "./pages/homepage/Homepage.tsx";
 import DiscoverPage from "./pages/discoverPage/DiscoverPage.tsx";
 import { themeContext } from "./contexts/themeContext.tsx";
+import MovieDetailsPage from "./pages/movieDetailsPage/MovieDetailsPage.tsx";
 
 const App = () => {
   const { theme, setTheme } = useContext(themeContext);
@@ -24,6 +25,7 @@ const App = () => {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Homepage />} />
         <Route path="discover" element={<DiscoverPage />} />
+        <Route path="movie/:id" element={<MovieDetailsPage />} />
       </Route>
     )
   );

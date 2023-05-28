@@ -21,6 +21,7 @@ body {
 
 .App {
   background-color: var(--body);
+  // transition: 0.3s ease;
 
   --primary-color: #ad241b;
   --secondary-color: rgb(236, 236, 236);
@@ -46,11 +47,15 @@ body {
 .App.light {
   --body: rgb(242, 242, 242);
   --secondary-color: rgb(236, 236, 236);
+  --text-color: #111;
+  --box-shadow-color: #00000030;
 }
 
 .App.dark {
   --body: rgb(15, 15, 15);
   --secondary-color: rgb(29, 29, 29);
+  --text-color: #fff;
+  --box-shadow-color: #ffffff60;
 }
 
 @media (prefers-color-scheme: dark) {

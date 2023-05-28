@@ -7,7 +7,7 @@ import MovieCard from "../movieCard/MovieCard";
 interface CarouselPropTypes {
   data: any[];
   carouselHeader: string;
-  link: string;
+  link?: string;
 }
 
 const Carousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
