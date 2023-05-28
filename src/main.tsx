@@ -7,6 +7,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import { MobileMenuProvider } from "./contexts/mobileMenuContext.tsx";
 import { SearchContextProvider } from "./contexts/searchContext.tsx";
 import { ThemeContextProvider } from "./contexts/themeContext.tsx";
+import { AuthContextProvider } from "./contexts/authContext.tsx";
 
 const queryClient = new QueryClient();
 
@@ -14,11 +15,13 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ThemeContextProvider>
-        <MobileMenuProvider>
-          <SearchContextProvider>
-            <App />
-          </SearchContextProvider>
-        </MobileMenuProvider>
+        <AuthContextProvider>
+          <MobileMenuProvider>
+            <SearchContextProvider>
+              <App />
+            </SearchContextProvider>
+          </MobileMenuProvider>
+        </AuthContextProvider>
       </ThemeContextProvider>
 
       <ReactQueryDevtools initialIsOpen={false} />

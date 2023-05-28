@@ -1,4 +1,7 @@
+import { useContext, useState } from "react";
+import { authContext } from "../../contexts/authContext";
 import "./LoginPage.scss";
+import SignUpForm from "./components/signUpForm/SignUpForm";
 
 const LoginPage = () => {
   return (
@@ -7,11 +10,18 @@ const LoginPage = () => {
 
       <div className="login-page__content">
         <div className="login-page__content--illustration"></div>
-        <form className="login-page__content--form">
+        {/* <form
+          className="login-page__content--form"
+          onSubmit={(e) => handleSubmit(e)}
+        >
           <label htmlFor="first-name">
             <span>First Name</span>
             <input
               type="text"
+              value={userInput.firstName}
+              onChange={(e) =>
+                setUserInput({ ...userInput, firstName: e.target.value })
+              }
               name="first-name"
               id="first-name"
               placeholder="Enter First Name"
@@ -22,6 +32,10 @@ const LoginPage = () => {
             <span>Last Name</span>
             <input
               type="text"
+              value={userInput.lastName}
+              onChange={(e) =>
+                setUserInput({ ...userInput, lastName: e.target.value })
+              }
               name="last-name"
               id="last-name"
               placeholder="Enter Last Name"
@@ -32,6 +46,10 @@ const LoginPage = () => {
             <span>Email Address</span>
             <input
               type="email"
+              value={userInput.email}
+              onChange={(e) =>
+                setUserInput({ ...userInput, email: e.target.value })
+              }
               name="email"
               id="email"
               placeholder="Enter Email"
@@ -40,7 +58,8 @@ const LoginPage = () => {
           </label>
 
           <button className="login-page__content--form_button">Sign Up</button>
-        </form>
+        </form> */}
+        <SignUpForm />
       </div>
     </div>
   );

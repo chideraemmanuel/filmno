@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import "./User.scss";
 import { FiUserPlus } from "react-icons/fi";
+import { useContext } from "react";
+import { authContext } from "../../contexts/authContext";
 
-const isLoggedIn = false;
+// const isLoggedIn = false;
 
 const User = () => {
+  const { isLoggedIn, setIsLoggedIn, user, setUser } = useContext(authContext);
+
   return (
     <>
       {!isLoggedIn ? (
@@ -12,7 +16,7 @@ const User = () => {
           <FiUserPlus />
         </Link>
       ) : (
-        <div className="user__logged-in"></div>
+        <div className="user__logged-in">HI</div>
       )}
     </>
   );

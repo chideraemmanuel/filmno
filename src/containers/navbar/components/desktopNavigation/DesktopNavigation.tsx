@@ -20,16 +20,6 @@ const DesktopNavigation = () => {
           <input type="text" placeholder="Search for movies" />
           <FaSearch />
         </form>
-        {/* 
-        {isLoggedIn ? (
-          <div className="desktop-navigation__header--account">
-            <span>CE</span>
-          </div>
-        ) : (
-          <Link to="/account" className="desktop-navigation__header--account">
-            <FiUserPlus />
-          </Link>
-        )} */}
         <User />
       </div>
     </div>
