@@ -18,6 +18,7 @@ import { themeContext } from "./contexts/themeContext.tsx";
 import MovieDetailsPage from "./pages/movieDetailsPage/MovieDetailsPage.tsx";
 import SearchResultsPage from "./pages/searchResultsPage/SearchResultsPage.tsx";
 import LoginPage from "./pages/loginPage/LoginPage.tsx";
+import NotFoundPage from "./pages/notFoundPage/NotFoundPage.tsx";
 
 const App = () => {
   const { theme, setTheme } = useContext(themeContext);
@@ -30,6 +31,8 @@ const App = () => {
         <Route path="movie/:id" element={<MovieDetailsPage />} />
         <Route path="search/:searchTerm" element={<SearchResultsPage />} />
         <Route path="login" element={<LoginPage />} />
+
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     )
   );

@@ -64,7 +64,7 @@ const MobileMenu = () => {
           {navLinks.map((item) => {
             return (
               <li key={item.to}>
-                <NavLink to={item.to}>
+                <NavLink to={item.to} onClick={() => setIsMenuOpen(false)}>
                   {item.icon}
                   <span>{item.name}</span>
                 </NavLink>
