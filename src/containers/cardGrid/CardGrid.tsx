@@ -9,7 +9,7 @@ const CardGrid = ({ data }: CardGridPropTypes) => {
   return (
     <section className="card-grid">
       {data?.map((item) => (
-        <MovieCard {...item} />
+        <MovieCard item={item} />
       ))}
     </section>
   );

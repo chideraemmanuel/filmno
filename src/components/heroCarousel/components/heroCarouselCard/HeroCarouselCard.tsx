@@ -1,12 +1,35 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./HeroCarouselCard.scss";
 import { AiFillStar, AiOutlinePlus } from "react-icons/ai";
 import poster from "../../../../assets/poster.jpg";
+import { wishListContext } from "../../../../contexts/wishListContext";
 
 const overview =
   " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis ut a optio architecto perferendis nihil illum sequi doloremque quasi voluptas reiciendis rem vero ipsa libero, id eligendi non ipsum explicabo.";
 
-const HeroCarouselCard = () => {
+interface carouselCardPropTypes {
+  item: {
+    id: number;
+  };
+}
+
+const HeroCarouselCard = ({ item }: carouselCardPropTypes) => {
+  const { wishList, setWishList } = useContext(wishListContext);
+
+  const addToWishList = (id: number) => {
+    wishList.map((wishListItem: any) => {
+      if (wishListItem.id === id) {
+        return;
+        // already in wishlist
+      } else {
+        // setWishList([...wishList, item]);
+        console.log(id);
+      }
+    });
+    console.log(id);
+  };
+
   return (
     <div
       className="hero-carousel-card"
@@ -28,7 +51,7 @@ const HeroCarouselCard = () => {
             <AiFillStar />
             <span>3.4</span>
           </div>
-          <AiOutlinePlus />
+          <AiOutlinePlus onClick={() => addToWishList(1)} />
         </div>
       </div>
     </div>

@@ -2,8 +2,31 @@ import "./MovieCard.scss";
 import poster from "../../assets/poster.jpg";
 import { AiOutlinePlus, AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { wishListContext } from "../../contexts/wishListContext";
 
-const MovieCard = () => {
+interface carouselCardPropTypes {
+  item: {
+    id: number;
+  };
+}
+
+const MovieCard = ({ item }: carouselCardPropTypes) => {
+  const { wishList, setWishList } = useContext(wishListContext);
+
+  const addToWishList = (id: number) => {
+    wishList.map((wishListItem: any) => {
+      if (wishListItem.id === id) {
+        return;
+        // already in wishlist
+      } else {
+        // setWishList([...wishList, item]);
+        console.log(id);
+      }
+    });
+    console.log(id);
+  };
+
   return (
     <div
       className="movie-card"
@@ -20,7 +43,7 @@ const MovieCard = () => {
             <AiFillStar />
             <span>3.4</span>
           </div>
-          <AiOutlinePlus />
+          <AiOutlinePlus onClick={() => addToWishList(2)} />
         </div>
       </div>
     </div>
