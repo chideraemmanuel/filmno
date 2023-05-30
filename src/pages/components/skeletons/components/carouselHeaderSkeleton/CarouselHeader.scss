@@ -1,0 +1,22 @@
+// .carousel-header-skeleton {
+//   display: flex;
+//   justify-content: space-between;
+
+//   > div * {
+//     width: 100%;
+//   }
+// }
+
+.carousel-header-skeleton {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+
+  &__header {
+    width: 30%;
+    // height: 2rem;
+  }
+
+  &__link {
+    // width: 30%;
+  }
+}

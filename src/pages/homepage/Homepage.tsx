@@ -2,6 +2,7 @@ import axios from "axios";
 import Carousel from "../../components/carousel/Carousel";
 import HeroCarousel from "../../components/heroCarousel/HeroCarousel";
 import "./Homepage.scss";
+import HomePageSkeleton from "../components/skeletons/homepageSkeleton/HomepageSkeleton";
 
 const data = [1, 2, , 3, 4, 5, 6, 7, 8, 9, 0];
 
@@ -16,6 +17,7 @@ const data = [1, 2, , 3, 4, 5, 6, 7, 8, 9, 0];
 const Homepage = () => {
   return (
     <div className="homepage">
+      {/* <HomePageSkeleton /> */}
       <HeroCarousel
         data={data}
         carouselHeader="Trending Movies"

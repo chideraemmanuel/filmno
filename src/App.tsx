@@ -20,6 +20,9 @@ import SearchResultsPage from "./pages/searchResultsPage/SearchResultsPage.tsx";
 import LoginPage from "./pages/loginPage/LoginPage.tsx";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage.tsx";
 
+import { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 const App = () => {
   const { theme, setTheme } = useContext(themeContext);
 
@@ -39,7 +42,12 @@ const App = () => {
 
   return (
     <div className={`App ${theme}`}>
-      <RouterProvider router={router} />
+      <SkeletonTheme
+        baseColor={theme === "light" ? "#c6c6c6" : "#787878"}
+        highlightColor={theme === "light" ? "#dbdbdb" : "#464646"}
+      >
+        <RouterProvider router={router} />
+      </SkeletonTheme>
     </div>
   );
 };

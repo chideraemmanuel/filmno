@@ -1,0 +1,22 @@
+.movie-details-page-skeleton {
+  padding: 0 20px;
+  // height: calc(100vh - 110px);
+  height: 100vh;
+  overflow: hidden;
+
+  &__info {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    gap: 20px;
+
+    @media screen and (max-width: 540px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+}
