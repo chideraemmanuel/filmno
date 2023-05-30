@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import "./CarouselHeader.scss";
 import { FaChevronRight } from "react-icons/fa";
+import { CarouselHeaderPropTypes } from "../../../utilities/componentsTypes";
 
-interface CarouselHeaderPropTypes {
-  carouselHeader: string;
-  link?: string;
-}
+// interface CarouselHeaderPropTypes {
+//   carouselHeader: string;
+//   link?: string;
+// }
 
 const CarouselHeader = ({ carouselHeader, link }: CarouselHeaderPropTypes) => {
   return (

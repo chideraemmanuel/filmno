@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import "./SignUpForm.scss";
 import { authContext } from "../../../../contexts/authContext";
+import { AuthUser } from "../../../../contexts/utilities/contextTypes";
 
-interface AuthUser {
-  firstName: string;
-  lastName: string;
-  email: string;
-}
+// interface AuthUser {
+//   firstName: string;
+//   lastName: string;
+//   email: string;
+// }
 
 const SignUpForm = () => {
   const { isLoggedIn, setIsLoggedIn, user, setUser } = useContext(authContext);

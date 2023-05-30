@@ -4,12 +4,13 @@ import { FreeMode, Pagination } from "swiper";
 import HeroCarouselCard from "./components/heroCarouselCard/HeroCarouselCard";
 import CarouselHeader from "../carousel/carouselHeader/CarouselHeader";
 import MovieCard from "../movieCard/MovieCard";
+import { CarouselPropTypes } from "../../utilities/componentsTypes";
 
-interface CarouselPropTypes {
-  data: any[];
-  carouselHeader: string;
-  link: string;
-}
+// interface CarouselPropTypes {
+//   data: any[];
+//   carouselHeader: string;
+//   link: string;
+// }
 
 const HeroCarousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
   return (

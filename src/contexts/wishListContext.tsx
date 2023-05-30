@@ -1,14 +1,15 @@
 import { createContext, useState } from "react";
+import { ContextProviderPropTypes } from "./utilities/contextTypes";
 
 export const wishListContext = createContext<any>(null);
 
-interface wishListContextProviderPropTypes {
-  children: React.ReactNode;
-}
+// interface wishListContextProviderPropTypes {
+//   children: React.ReactNode;
+// }
 
 export const WishListContextProviver = ({
   children,
-}: wishListContextProviderPropTypes) => {
+}: ContextProviderPropTypes) => {
   const [wishList, setWishList] = useState([]);
 
   return (

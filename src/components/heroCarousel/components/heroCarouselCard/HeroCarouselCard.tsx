@@ -4,15 +4,16 @@ import "./HeroCarouselCard.scss";
 import { AiFillStar, AiOutlinePlus } from "react-icons/ai";
 import poster from "../../../../assets/poster.jpg";
 import { wishListContext } from "../../../../contexts/wishListContext";
+import { carouselCardPropTypes } from "../../../../utilities/componentsTypes";
 
 const overview =
   " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis ut a optio architecto perferendis nihil illum sequi doloremque quasi voluptas reiciendis rem vero ipsa libero, id eligendi non ipsum explicabo.";
 
-interface carouselCardPropTypes {
-  item: {
-    id: number;
-  };
-}
+// interface carouselCardPropTypes {
+//   item: {
+//     id: number;
+//   };
+// }
 
 const HeroCarouselCard = ({ item }: carouselCardPropTypes) => {
   const { wishList, setWishList } = useContext(wishListContext);

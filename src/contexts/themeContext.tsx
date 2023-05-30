@@ -1,14 +1,15 @@
 import { createContext, useState } from "react";
+import { ContextProviderPropTypes } from "./utilities/contextTypes";
 
 export const themeContext = createContext<any>(null);
 
-interface ThemeContextProviderPropTypes {
-  children: React.ReactNode;
-}
+// interface ThemeContextProviderPropTypes {
+//   children: React.ReactNode;
+// }
 
 export const ThemeContextProvider = ({
   children,
-}: ThemeContextProviderPropTypes) => {
+}: ContextProviderPropTypes) => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   return (

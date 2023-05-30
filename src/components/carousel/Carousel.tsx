@@ -3,12 +3,13 @@ import CarouselHeader from "./carouselHeader/CarouselHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
 import MovieCard from "../movieCard/MovieCard";
+import { CarouselPropTypes } from "../../utilities/componentsTypes";
 
-interface CarouselPropTypes {
-  data: any[];
-  carouselHeader: string;
-  link?: string;
-}
+// interface CarouselPropTypes {
+//   data: any[];
+//   carouselHeader: string;
+//   link?: string;
+// }
 
 const Carousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
   return (

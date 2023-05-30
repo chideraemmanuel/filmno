@@ -4,12 +4,13 @@ import { AiOutlinePlus, AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { wishListContext } from "../../contexts/wishListContext";
+import { carouselCardPropTypes } from "../../utilities/componentsTypes";
 
-interface carouselCardPropTypes {
-  item: {
-    id: number;
-  };
-}
+// interface carouselCardPropTypes {
+//   item: {
+//     id: number;
+//   };
+// }
 
 const MovieCard = ({ item }: carouselCardPropTypes) => {
   const { wishList, setWishList } = useContext(wishListContext);
