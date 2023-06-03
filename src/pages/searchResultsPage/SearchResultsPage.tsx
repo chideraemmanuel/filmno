@@ -3,22 +3,54 @@ import CardGrid from "../../containers/cardGrid/CardGrid";
 import NoSearchResults from "../../containers/noSearchResults/NoSearchResults";
 import PageHeader from "../components/pageHeader/PageHeader";
 import "./SearchResultsPage.scss";
+import { useQuery } from "react-query";
+import axios from "axios";
+import SubpageSkeleton from "../components/skeletons/subpageSkeleton/SubpageSkeleton";
 
 // const data = [1, 2, 3, 4, 4, 6, 7, 8, 9, 0];
 
-const searchResults: [] | any[] = [];
+// const searchResults: [] | any[] = [];
+
+const accessToken = import.meta.env.VITE_TMBD_API_READ_ACCESS_TOKEN;
+
+const fetchSearchResults = ({ queryKey }: { queryKey: any[] }) => {
+  const searchTerm = queryKey[1];
+  return axios.get("https://api.themoviedb.org/3/search/movie", {
+    params: {
+      query: searchTerm,
+      include_adult: "false",
+      language: "en-US",
+      page: "1",
+    },
+    headers: {
+      accept: "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+};
 
 const SearchResultsPage = () => {
   const { searchTerm } = useParams();
 
+  const {
+    data: searchResults,
+    isLoading,
+    error,
+  } = useQuery(["movie search", searchTerm], fetchSearchResults);
+
   return (
     <div className="search-results-page">
-      {searchResults.length === 0 && <NoSearchResults />}
+      {isLoading && <SubpageSkeleton />}
 
-      {searchResults.length > 0 && (
+      {searchResults?.data.results.length === 0 && <NoSearchResults />}
+
+      {searchResults?.data.results.length > 0 && (
         <div className="search-results-page__results">
-          <PageHeader pageHeader={`Results for ${searchTerm}:`} />
-          <CardGrid data={searchResults} />
+          <PageHeader
+            pageHeader={`Results for ${searchTerm}:`}
+            filter={false}
+          />
+          <CardGrid data={searchResults?.data.results} />
         </div>
       )}
     </div>

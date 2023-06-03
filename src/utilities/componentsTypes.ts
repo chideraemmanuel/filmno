@@ -28,6 +28,7 @@ export interface CardGridPropTypes {
 
 export interface PageHeaderPropTypes {
   pageHeader: string;
+  filter: boolean;
 }
 
 export interface RatingPropTypes {

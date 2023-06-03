@@ -50,7 +50,9 @@ const Homepage = () => {
 
       {isError && <FetchErrorPage />}
 
-      {data && <PageHeader pageHeader="Discover trending movies" />}
+      {data && (
+        <PageHeader pageHeader="Discover trending movies" filter={true} />
+      )}
       {data && <CardGrid data={data.data.results} />}
       {data && <Pagination />}
     </div>

@@ -6,11 +6,11 @@ import "./PageHeader.scss";
 //   pageHeader: string;
 // }
 
-const PageHeader = ({ pageHeader }: PageHeaderPropTypes) => {
+const PageHeader = ({ pageHeader, filter }: PageHeaderPropTypes) => {
   return (
     <div className="page-header">
       <h2 className="page-header__title">{pageHeader}</h2>
-      <FilterByGenre />
+      {filter && <FilterByGenre />}
     </div>
   );
 };

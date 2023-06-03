@@ -4,7 +4,11 @@ import { FiGithub } from "react-icons/fi";
 
 const GithubLink = () => {
   return (
-    <Link to="https://github.com" target="_blank" className="github-link">
+    <Link
+      to="https://github.com/chideraemmanuel/filmno"
+      target="_blank"
+      className="github-link"
+    >
       <FiGithub />
     </Link>
   );
