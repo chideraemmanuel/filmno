@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { wishListContext } from "../../contexts/wishListContext";
 import { carouselCardPropTypes } from "../../utilities/componentsTypes";
+import getPosterUrl from "../../utilities/getPosterUrl";
 
 // interface carouselCardPropTypes {
 //   item: {
@@ -13,7 +14,8 @@ import { carouselCardPropTypes } from "../../utilities/componentsTypes";
 // }
 
 const MovieCard = ({ data: movie }: carouselCardPropTypes) => {
-  const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
+  // const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
+  const posterUrl = getPosterUrl(movie.poster_path);
   const { wishList, setWishList } = useContext(wishListContext);
 
   const addToWishList = (id: number) => {
@@ -43,7 +45,7 @@ const MovieCard = ({ data: movie }: carouselCardPropTypes) => {
         <div className="movie-card__info--bottom">
           <div className="movie-card__info--bottom_rating">
             <AiFillStar />
-            <span>{parseInt(movie.vote_average).toFixed(1)}</span>
+            <span>{parseFloat(movie.vote_average).toFixed(1)}</span>
           </div>
           <AiOutlinePlus onClick={() => addToWishList(2)} />
         </div>

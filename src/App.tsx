@@ -56,3 +56,5 @@ export default App;
 // FILTER FUNCTIONALITY ON SUBPAGES
 // PUT EVENT HANDLERS IN A FILE
 // FOOTER!!
+
+// url: 'https://api.themoviedb.org/3/genre/movie/list'

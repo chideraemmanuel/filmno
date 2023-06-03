@@ -1,10 +1,10 @@
-import React from "react";
+import "./MovieCardSkeleton.scss";
 import Skeleton from "react-loading-skeleton";
 
 const MovieCardSkeleton = () => {
   return (
     <div className="movie-card-skeleton">
-      <Skeleton height={200} />
+      <Skeleton height={"100%"} />
     </div>
   );
 };

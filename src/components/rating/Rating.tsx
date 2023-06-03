@@ -1,11 +1,12 @@
 import { AiFillStar } from "react-icons/ai";
 import "./Rating.scss";
+import { RatingPropTypes } from "../../utilities/componentsTypes";
 
-const Rating = () => {
+const Rating = ({ rating }: RatingPropTypes) => {
   return (
     <span className="rating">
       <AiFillStar />
-      <span>3.4</span>
+      <span>{rating}</span>
     </span>
   );
 };

@@ -5,9 +5,11 @@ import { FaTrash } from "react-icons/fa";
 import CastsCarousel from "../castsCarousel/CastsCarousel";
 import CastHeadshot from "../castsCarousel/components/castHeadshot/CastHeadshot";
 import { carouselCardPropTypes } from "../../../../utilities/componentsTypes";
+import getPosterUrl from "../../../../utilities/getPosterUrl";
 
 const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
-  const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
+  // const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
+  const posterUrl = getPosterUrl(movie.poster_path);
 
   return (
     <div className="movie-details">
@@ -19,7 +21,7 @@ const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
         <div className="movie-details__info--header">
           <div className="movie-details__info--header_title">
             <h2>{movie.title}</h2>
-            <Rating />
+            <Rating rating={parseFloat(movie.vote_average).toFixed(1)} />
           </div>
 
           <div className="movie-details__info--header_genres">

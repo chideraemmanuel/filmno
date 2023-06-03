@@ -12,6 +12,10 @@
     @media screen and (max-width: 540px) {
       grid-template-columns: 1fr;
     }
+
+    & .movie-card-skeleton {
+      height: 400px;
+    }
   }
 
   &__carousel {

@@ -10,8 +10,8 @@ const SubpageSkeleton = () => {
       <CarouselHeaderSkeleton />
       <br />
       <div className="subpage-skeleton__carousel">
-        {numbers.map((_number) => (
-          <MovieCardSkeleton />
+        {numbers.map((_number, index) => (
+          <MovieCardSkeleton key={index} />
         ))}
       </div>
     </div>

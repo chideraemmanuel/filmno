@@ -29,3 +29,7 @@ export interface CardGridPropTypes {
 export interface PageHeaderPropTypes {
   pageHeader: string;
 }
+
+export interface RatingPropTypes {
+  rating: string;
+}

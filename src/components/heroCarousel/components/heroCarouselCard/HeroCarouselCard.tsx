@@ -51,7 +51,7 @@ const HeroCarouselCard = ({ data: movie }: carouselCardPropTypes) => {
         <div className="hero-carousel-card__content--bottom">
           <div className="hero-carousel-card__content--bottom_rating">
             <AiFillStar />
-            <span>{parseInt(movie.vote_average).toFixed(1)}</span>
+            <span>{parseFloat(movie.vote_average).toFixed(1)}</span>
           </div>
           <AiOutlinePlus onClick={() => addToWishList(1)} />
         </div>
