@@ -1,0 +1,20 @@
+.footer {
+  padding: 30px 20px;
+  &__hr {
+    height: 1px;
+    background-color: var(--grey);
+    // width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--copyright {
+      color: var(--text-color);
+      font-size: var(--font-size);
+    }
+  }
+}

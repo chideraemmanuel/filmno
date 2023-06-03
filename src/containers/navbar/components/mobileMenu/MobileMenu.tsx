@@ -20,28 +20,18 @@ const MobileMenu = () => {
 
   const navLinks = [
     {
-      name: "home",
-      to: "/",
-      icon: <AiOutlineHome />,
-    },
-    {
       name: "discover",
-      to: "/discover",
+      to: "/",
       icon: <RiCompassDiscoverLine />,
     },
     {
-      name: "popular",
-      to: "/popular",
+      name: "genres",
+      to: "/genres",
       icon: <AiOutlineFire />,
     },
     {
-      name: "top chart",
-      to: "/top-chart",
-      icon: <AiOutlineLineChart />,
-    },
-    {
-      name: "recent releases",
-      to: "/recent-releases",
+      name: "watch list",
+      to: "/watch-list",
       icon: <AiOutlineCalendar />,
     },
   ];

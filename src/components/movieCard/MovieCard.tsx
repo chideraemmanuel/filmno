@@ -12,7 +12,8 @@ import { carouselCardPropTypes } from "../../utilities/componentsTypes";
 //   };
 // }
 
-const MovieCard = ({ item }: carouselCardPropTypes) => {
+const MovieCard = ({ data: movie }: carouselCardPropTypes) => {
+  const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
   const { wishList, setWishList } = useContext(wishListContext);
 
   const addToWishList = (id: number) => {
@@ -31,18 +32,18 @@ const MovieCard = ({ item }: carouselCardPropTypes) => {
   return (
     <div
       className="movie-card"
-      style={{ background: `url(${poster}) no-repeat center center/cover` }}
+      style={{ background: `url(${posterUrl}) no-repeat center center/cover` }}
     >
       <div className="movie-card__overlay"></div>
 
       <div className="movie-card__info">
-        <Link to="/" className="movie-card__info--title">
-          The Umbrella Academy: season three, episode 1
+        <Link to={`/movie/${movie.id}`} className="movie-card__info--title">
+          {movie.title}
         </Link>
         <div className="movie-card__info--bottom">
           <div className="movie-card__info--bottom_rating">
             <AiFillStar />
-            <span>3.4</span>
+            <span>{parseInt(movie.vote_average).toFixed(1)}</span>
           </div>
           <AiOutlinePlus onClick={() => addToWishList(2)} />
         </div>

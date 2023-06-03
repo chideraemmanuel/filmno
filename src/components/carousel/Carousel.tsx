@@ -46,8 +46,8 @@ const Carousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
         >
           {data &&
             data.map((item) => (
-              <SwiperSlide key={item._id}>
-                <MovieCard item={item} />
+              <SwiperSlide key={item.id}>
+                <MovieCard data={item} />
               </SwiperSlide>
             ))}
         </Swiper>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ThemeToggle from "../../../../components/themeToggle/ThemeToggle";
-import User from "../../../../components/user/User";
+import GithubLink from "../../../../components/githubLink/GithubLink";
 import SideMenu from "../sideMenu/SideMenu";
 import "./DesktopNavigation.scss";
 import { FaTrash, FaSearch, FaUser } from "react-icons/fa";
@@ -51,7 +51,7 @@ const DesktopNavigation = () => {
           />
           <FaSearch onClick={handleSearchSubmit} />
         </form>
-        <User />
+        <GithubLink />
       </div>
     </div>
   );

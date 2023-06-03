@@ -15,28 +15,18 @@ import {
 const SideMenu = () => {
   const navLinks = [
     {
-      name: "home",
-      to: "/",
-      icon: <AiOutlineHome />,
-    },
-    {
       name: "discover",
-      to: "/discover",
+      to: "/",
       icon: <RiCompassDiscoverLine />,
     },
     {
-      name: "popular",
-      to: "/popular",
+      name: "genres",
+      to: "/genres",
       icon: <AiOutlineFire />,
     },
     {
-      name: "top chart",
-      to: "/top-chart",
-      icon: <AiOutlineLineChart />,
-    },
-    {
-      name: "recent releases",
-      to: "/recent-releases",
+      name: "watch list",
+      to: "/watch-list",
       icon: <AiOutlineCalendar />,
     },
   ];
@@ -47,7 +37,7 @@ const SideMenu = () => {
         <Logo />
       </div>
 
-      <div className="side-menu__hr"></div>
+      {/* <div className="side-menu__hr"></div> */}
 
       <ul className="side-menu__nav-links">
         {navLinks.map((item) => {

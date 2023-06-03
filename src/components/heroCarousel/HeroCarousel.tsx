@@ -12,7 +12,11 @@ import { CarouselPropTypes } from "../../utilities/componentsTypes";
 //   link: string;
 // }
 
-const HeroCarousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
+const HeroCarousel = ({
+  data: trendingMovies,
+  carouselHeader,
+  link,
+}: CarouselPropTypes) => {
   return (
     <section className="hero-carousel">
       <CarouselHeader carouselHeader={carouselHeader} link={link} />
@@ -42,10 +46,10 @@ const HeroCarousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
           //   }}
           className="mySwiper"
         >
-          {data &&
-            data.map((item) => (
-              <SwiperSlide key={item._id}>
-                <HeroCarouselCard item={item} />
+          {trendingMovies &&
+            trendingMovies.map((movie) => (
+              <SwiperSlide key={movie.id}>
+                <HeroCarouselCard data={movie} />
                 {/* <MovieCard /> */}
               </SwiperSlide>
             ))}

@@ -1,31 +1,25 @@
-import axios from "axios";
-import Carousel from "../../components/carousel/Carousel";
-import HeroCarousel from "../../components/heroCarousel/HeroCarousel";
+import { useState } from "react";
+import CardGrid from "../../containers/cardGrid/CardGrid";
+import PageHeader from "../components/pageHeader/PageHeader";
+import SubpageSkeleton from "../components/skeletons/subpageSkeleton/SubpageSkeleton";
 import "./Homepage.scss";
-import HomePageSkeleton from "../components/skeletons/homepageSkeleton/HomepageSkeleton";
-
-const data = [1, 2, , 3, 4, 5, 6, 7, 8, 9, 0];
-
-// const accessToken = import.meta.env.VITE_TMBD_API_READ_ACCESS_accessToken;
-
-// axios.get("https://example.com/getSomething", {
-//   headers: {
-//     Authorization: "Bearer " + accessToken,
-//   },
-// });
+import FetchErrorPage from "../fetchErrorPage/FetchErrorPage";
+import Pagination from "../components/pagination/Pagination";
+import useFetchTrendingMovies from "../../hooks/useFetchTrendingMovies";
 
 const Homepage = () => {
+  const [pageNumber, setPageNumber] = useState(1);
+  const { data, isLoading, isError } = useFetchTrendingMovies(pageNumber);
+
   return (
     <div className="homepage">
-      {/* <HomePageSkeleton /> */}
-      <HeroCarousel
-        data={data}
-        carouselHeader="Trending Movies"
-        link="/discover"
-      />
-      <Carousel data={data} carouselHeader="Carousel Header" link="/" />
-      <Carousel data={data} carouselHeader="Carousel Header" link="/" />
-      <Carousel data={data} carouselHeader="Carousel Header" link="/" />
+      {isLoading && <SubpageSkeleton />}
+      {isError && <FetchErrorPage />}
+      {data && <PageHeader pageHeader="Discover trending movies" />}
+      {data && <CardGrid data={data.data.results} />}
+
+      <Pagination />
+      <button onClick={() => setPageNumber(pageNumber + 1)}>next page</button>
     </div>
   );
 };

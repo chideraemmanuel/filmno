@@ -8,7 +8,7 @@ import { FiUserPlus } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
-import User from "../../../../components/user/User";
+import GithubLink from "../../../../components/githubLink/GithubLink";
 import { searchContext } from "../../../../contexts/searchContext";
 
 const isLoggedIn = false;
@@ -61,7 +61,7 @@ const TabletNavigation = () => {
 
         <div className="tablet-navigation__header--right">
           <ThemeToggle />
-          <User />
+          <GithubLink />
         </div>
       </div>
     </div>

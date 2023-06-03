@@ -4,25 +4,28 @@ import Rating from "../../../../components/rating/Rating";
 import { FaTrash } from "react-icons/fa";
 import CastsCarousel from "../castsCarousel/CastsCarousel";
 import CastHeadshot from "../castsCarousel/components/castHeadshot/CastHeadshot";
+import { carouselCardPropTypes } from "../../../../utilities/componentsTypes";
 
-const MovieDetails = () => {
+const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
+  const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
+
   return (
     <div className="movie-details">
       <div className="movie-details__poster">
-        <img src={poster} alt="poster" />
+        <img src={posterUrl} alt="poster" />
       </div>
 
       <div className="movie-details__info">
         <div className="movie-details__info--header">
           <div className="movie-details__info--header_title">
-            <h2>The Umbrella Academy: season 1 episode 3</h2>
+            <h2>{movie.title}</h2>
             <Rating />
           </div>
 
           <div className="movie-details__info--header_genres">
-            <span>Action</span>
-            <span>Adventure</span>
-            <span>Thriller</span>
+            {movie.genres.map((genre) => (
+              <span>{genre.name}</span>
+            ))}
           </div>
         </div>
 
@@ -30,10 +33,7 @@ const MovieDetails = () => {
 
         <div className="movie-details__info--details">
           <p className="movie-details__info--details_overview">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-            repudiandae officiis possimus, ab fugiat aliquam maxime, commodi
-            quos assumenda nesciunt consequatur. Aut nihil quibusdam consequatur
-            commodi. Laborum ab pariatur quo?
+            {movie.overview}
           </p>
 
           {/* <div className="movie-details__info--details_genres">
@@ -43,12 +43,11 @@ const MovieDetails = () => {
             <FaTrash />
           </div> */}
 
-          {/* <CastsCarousel /> */}
-          <div className="test">
+          {/* <div className="test">
             <CastHeadshot />
             <CastHeadshot />
             <CastHeadshot />
-          </div>
+          </div> */}
         </div>
 
         <div className="movie-details__info--buttons">

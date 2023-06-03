@@ -10,8 +10,15 @@ export interface CarouselHeaderPropTypes {
 }
 
 export interface carouselCardPropTypes {
-  item: {
+  data: {
     id: number;
+    title: string;
+    overview: string;
+    vote_average: string;
+    poster_path: string;
+    genres: {
+      name: string;
+    }[];
   };
 }
 
