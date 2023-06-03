@@ -1,7 +1,10 @@
-import { PaginationPropTypes } from "../../../utilities/componentsTypes";
+import { useContext } from "react";
 import "./Pagination.scss";
+import { filterAndPaginationContext } from "../../../contexts/filterAndPaginationContext";
 
-const Pagination = ({ pageNumber, setPageNumber }: PaginationPropTypes) => {
+const Pagination = () => {
+  const { pageNumber, setPageNumber } = useContext(filterAndPaginationContext);
+
   return (
     <div className="pagination">
       <button

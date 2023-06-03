@@ -9,6 +9,7 @@ import { SearchContextProvider } from "./contexts/searchContext.tsx";
 import { ThemeContextProvider } from "./contexts/themeContext.tsx";
 import { AuthContextProvider } from "./contexts/authContext.tsx";
 import { WishListContextProviver } from "./contexts/wishListContext.tsx";
+import { FilterAndPaginationContextProvider } from "./contexts/filterAndPaginationContext.tsx";
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           <MobileMenuProvider>
             <SearchContextProvider>
               <WishListContextProviver>
-                <App />
+                <FilterAndPaginationContextProvider>
+                  <App />
+                </FilterAndPaginationContextProvider>
               </WishListContextProviver>
             </SearchContextProvider>
           </MobileMenuProvider>

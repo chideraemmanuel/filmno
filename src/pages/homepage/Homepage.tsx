@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import CardGrid from "../../containers/cardGrid/CardGrid";
 import PageHeader from "../components/pageHeader/PageHeader";
 import SubpageSkeleton from "../components/skeletons/subpageSkeleton/SubpageSkeleton";
@@ -8,11 +8,15 @@ import Pagination from "../components/pagination/Pagination";
 import useFetchTrendingMovies from "../../hooks/useFetchTrendingMovies";
 import axios from "axios";
 import { useQuery } from "react-query";
+import { filterAndPaginationContext } from "../../contexts/filterAndPaginationContext";
 
 const Homepage = () => {
-  const [pageNumber, setPageNumber] = useState(1);
-  // console.log(pageNumber);
-  const { data, isLoading, isError } = useFetchTrendingMovies(pageNumber);
+  const { pageNumber } = useContext(filterAndPaginationContext);
+  const { genreId } = useContext(filterAndPaginationContext);
+  const { data, isLoading, isError } = useFetchTrendingMovies(
+    pageNumber,
+    genreId
+  );
 
   // const accessToken = import.meta.env.VITE_TMBD_API_READ_ACCESS_TOKEN;
 
@@ -43,13 +47,12 @@ const Homepage = () => {
   return (
     <div className="homepage">
       {isLoading && <SubpageSkeleton />}
+
       {isError && <FetchErrorPage />}
+
       {data && <PageHeader pageHeader="Discover trending movies" />}
       {data && <CardGrid data={data.data.results} />}
-
-      {data && (
-        <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
-      )}
+      {data && <Pagination />}
     </div>
   );
 };

@@ -33,8 +33,3 @@ export interface PageHeaderPropTypes {
 export interface RatingPropTypes {
   rating: string;
 }
-
-export interface PaginationPropTypes {
-  pageNumber: number;
-  setPageNumber: React.Dispatch<React.SetStateAction<number>>;
-}

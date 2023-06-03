@@ -1,0 +1,31 @@
+.filter-by-genre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  > span {
+    font-size: var(--font-size);
+  }
+
+  select {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    &:focus {
+      border: 1px solid blue;
+    }
+    option {
+      font-size: var(--font-size);
+      background-color: yellow;
+      cursor: pointer;
+
+      &:hover {
+        background-color: blue;
+      }
+    }
+  }
+}

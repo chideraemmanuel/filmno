@@ -29,3 +29,5 @@ const MovieDetailsPage = () => {
 };
 
 export default MovieDetailsPage;
+
+// SHOW EITHER RECOMMENDATIONS OR SIMILAR MOVIES BASED ON LENGTH OF DATA RETURNED
