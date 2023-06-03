@@ -47,8 +47,9 @@ const Homepage = () => {
       {data && <PageHeader pageHeader="Discover trending movies" />}
       {data && <CardGrid data={data.data.results} />}
 
-      <Pagination />
-      <button onClick={() => setPageNumber(pageNumber + 1)}>next page</button>
+      {data && (
+        <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+      )}
     </div>
   );
 };
