@@ -6,12 +6,7 @@ import { filterAndPaginationContext } from "../../../contexts/filterAndPaginatio
 const FilterByGenre = () => {
   const { data } = useFetchGenres();
 
-  const { genre, setGenre, genreId, setGenreId } = useContext(
-    filterAndPaginationContext
-  );
-
-  // console.log(genre);
-  // console.log(genreId);
+  const { genreId, setGenreId } = useContext(filterAndPaginationContext);
 
   return (
     <div className="filter-by-genre">

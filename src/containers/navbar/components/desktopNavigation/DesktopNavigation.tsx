@@ -3,15 +3,12 @@ import ThemeToggle from "../../../../components/themeToggle/ThemeToggle";
 import GithubLink from "../../../../components/githubLink/GithubLink";
 import SideMenu from "../sideMenu/SideMenu";
 import "./DesktopNavigation.scss";
-import { FaTrash, FaSearch, FaUser } from "react-icons/fa";
-import { FiUserPlus } from "react-icons/fi";
-import { Link, useNavigate } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { searchContext } from "../../../../contexts/searchContext";
 
-const isLoggedIn = false;
-
 const DesktopNavigation = () => {
-  const { isSearchActive, setIsSearchActive, searchTerm, setSearchTerm } =
+  const { setIsSearchActive, searchTerm, setSearchTerm } =
     useContext(searchContext);
 
   const navigate = useNavigate();

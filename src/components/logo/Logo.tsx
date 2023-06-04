@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { mobileMenuContext } from "../../contexts/mobileMenuContext";
 
 const Logo = () => {
-  const { isMenuOpen, setIsMenuOpen } = useContext(mobileMenuContext);
+  const { setIsMenuOpen } = useContext(mobileMenuContext);
 
   return (
     <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>

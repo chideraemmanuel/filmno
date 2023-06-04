@@ -2,10 +2,6 @@ import { PageHeaderPropTypes } from "../../../utilities/componentsTypes";
 import FilterByGenre from "../filterByGenre/FilterByGenre";
 import "./PageHeader.scss";
 
-// interface PageHeaderPropTypes {
-//   pageHeader: string;
-// }
-
 const PageHeader = ({ pageHeader, filter }: PageHeaderPropTypes) => {
   return (
     <div className="page-header">

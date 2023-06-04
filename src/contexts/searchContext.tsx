@@ -3,10 +3,6 @@ import { ContextProviderPropTypes } from "./utilities/contextTypes";
 
 export const searchContext = createContext<any>(null);
 
-// interface SearchContextProviderPropTypes {
-//   children: React.ReactNode;
-// }
-
 export const SearchContextProvider = ({
   children,
 }: ContextProviderPropTypes) => {

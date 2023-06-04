@@ -8,10 +8,6 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import SubpageSkeleton from "../components/skeletons/subpageSkeleton/SubpageSkeleton";
 
-// const data = [1, 2, 3, 4, 4, 6, 7, 8, 9, 0];
-
-// const searchResults: [] | any[] = [];
-
 const accessToken = import.meta.env.VITE_TMBD_API_READ_ACCESS_TOKEN;
 
 const fetchSearchResults = ({ queryKey }: { queryKey: any[] }) => {

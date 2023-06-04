@@ -13,8 +13,6 @@
   }
 
   select {
-    // background-color: var(--grey);
-    // color: var(--dark-grey);
     background-color: var(--primary-color);
     color: #fff;
     padding: 5px;
@@ -23,7 +21,6 @@
     cursor: pointer;
 
     @media screen and (max-width: 820px) {
-      // width: 100px;
       font-size: var(--font-size);
     }
 
@@ -32,7 +29,6 @@
     }
     option {
       font-size: var(--font-size);
-      // background-color: var(--grey);
       cursor: pointer;
     }
   }

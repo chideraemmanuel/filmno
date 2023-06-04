@@ -1,14 +1,9 @@
 import "./MovieDetails.scss";
-import poster from "../../../../assets/poster.jpg";
 import Rating from "../../../../components/rating/Rating";
-import { FaTrash } from "react-icons/fa";
-import CastsCarousel from "../castsCarousel/CastsCarousel";
-import CastHeadshot from "../castsCarousel/components/castHeadshot/CastHeadshot";
 import { carouselCardPropTypes } from "../../../../utilities/componentsTypes";
 import getPosterUrl from "../../../../utilities/getPosterUrl";
 
 const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
-  // const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
   const posterUrl = getPosterUrl(movie.poster_path);
 
   return (
@@ -31,25 +26,10 @@ const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
           </div>
         </div>
 
-        {/* <div className="movie-details__info--hr"></div> */}
-
         <div className="movie-details__info--details">
           <p className="movie-details__info--details_overview">
             {movie.overview}
           </p>
-
-          {/* <div className="movie-details__info--details_genres">
-            <FaTrash />
-            <FaTrash />
-            <FaTrash />
-            <FaTrash />
-          </div> */}
-
-          {/* <div className="test">
-            <CastHeadshot />
-            <CastHeadshot />
-            <CastHeadshot />
-          </div> */}
         </div>
 
         <div className="movie-details__info--buttons">

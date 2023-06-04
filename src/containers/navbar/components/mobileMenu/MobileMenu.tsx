@@ -1,17 +1,9 @@
 import Logo from "../../../../components/logo/Logo";
 import "./MobileMenu.scss";
-import { RiCloseFill, RiMenu4Line } from "react-icons/ri";
+import { RiCloseFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
-import { RiCompassDiscoverFill, RiCompassDiscoverLine } from "react-icons/ri";
-import {
-  AiOutlineHome,
-  AiFillFire,
-  AiOutlineFire,
-  AiOutlineAreaChart,
-  AiOutlineLineChart,
-  AiFillCalendar,
-  AiOutlineCalendar,
-} from "react-icons/ai";
+import { RiCompassDiscoverLine } from "react-icons/ri";
+import { AiOutlineFire, AiOutlineCalendar } from "react-icons/ai";
 import { useContext } from "react";
 import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
 

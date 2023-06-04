@@ -1,16 +1,8 @@
 import Logo from "../../../../components/logo/Logo";
 import "./SideMenu.scss";
 import { NavLink } from "react-router-dom";
-import { RiCompassDiscoverFill, RiCompassDiscoverLine } from "react-icons/ri";
-import {
-  AiOutlineHome,
-  AiFillFire,
-  AiOutlineFire,
-  AiOutlineAreaChart,
-  AiOutlineLineChart,
-  AiFillCalendar,
-  AiOutlineCalendar,
-} from "react-icons/ai";
+import { RiCompassDiscoverLine } from "react-icons/ri";
+import { AiOutlineFire, AiOutlineCalendar } from "react-icons/ai";
 
 const SideMenu = () => {
   const navLinks = [
@@ -36,8 +28,6 @@ const SideMenu = () => {
       <div className="side-menu__logo">
         <Logo />
       </div>
-
-      {/* <div className="side-menu__hr"></div> */}
 
       <ul className="side-menu__nav-links">
         {navLinks.map((item) => {

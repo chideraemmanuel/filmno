@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { BsSunFill, BsSun, BsMoonStarsFill, BsMoonStars } from "react-icons/bs";
+import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
 import { themeContext } from "../../contexts/themeContext";
 import "./ThemeToggle.scss";
 

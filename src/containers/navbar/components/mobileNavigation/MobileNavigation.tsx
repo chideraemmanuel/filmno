@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import "./MobileNavigation.scss";
-import { FaTrash, FaSearch, FaUser } from "react-icons/fa";
-import { RiMenu4Fill, RiMenu4Line } from "react-icons/ri";
-import { FiUserPlus } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { RiMenu4Fill } from "react-icons/ri";
 import MobileMenu from "../mobileMenu/MobileMenu";
 import Logo from "../../../../components/logo/Logo";
 import ThemeToggle from "../../../../components/themeToggle/ThemeToggle";
@@ -12,11 +10,8 @@ import { mobileMenuContext } from "../../../../contexts/mobileMenuContext";
 import { searchContext } from "../../../../contexts/searchContext";
 import GithubLink from "../../../../components/githubLink/GithubLink";
 
-const isLoggedIn = false;
-const searchActive = false;
-
 const MobileNavigation = () => {
-  const { isMenuOpen, setIsMenuOpen } = useContext(mobileMenuContext);
+  const { setIsMenuOpen } = useContext(mobileMenuContext);
   const { isSearchActive, setIsSearchActive } = useContext(searchContext);
 
   return (

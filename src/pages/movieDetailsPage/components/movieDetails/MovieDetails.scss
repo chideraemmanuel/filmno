@@ -46,12 +46,6 @@
       }
     }
 
-    // &--hr {
-    //   height: 1px;
-    //   width: 100%;
-    //   background-color: var(--dark-grey);
-    // }
-
     &--details {
       display: flex;
       flex-direction: column;
@@ -59,13 +53,6 @@
       &_overview {
         font-size: var(--font-size);
       }
-
-      //   &_genres {
-      //     display: flex;
-      //     align-items: center;
-      //     justify-content: flex-start;
-      //     gap: 10px;
-      //   }
     }
 
     &--buttons {

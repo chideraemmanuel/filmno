@@ -1,6 +1,5 @@
 import "./NoSearchResults.scss";
 import noSearchResultIllustration from "../../assets/no-search-result.svg";
-import noSearchResultIllustration2 from "../../assets/no-search-result2.svg";
 import { Link } from "react-router-dom";
 
 const NoSearchResults = () => {

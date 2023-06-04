@@ -3,10 +3,6 @@ import { ContextProviderPropTypes } from "./utilities/contextTypes";
 
 export const wishListContext = createContext<any>(null);
 
-// interface wishListContextProviderPropTypes {
-//   children: React.ReactNode;
-// }
-
 export const WishListContextProviver = ({
   children,
 }: ContextProviderPropTypes) => {

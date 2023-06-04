@@ -3,11 +3,6 @@ import "./CarouselHeader.scss";
 import { FaChevronRight } from "react-icons/fa";
 import { CarouselHeaderPropTypes } from "../../../utilities/componentsTypes";
 
-// interface CarouselHeaderPropTypes {
-//   carouselHeader: string;
-//   link?: string;
-// }
-
 const CarouselHeader = ({ carouselHeader, link }: CarouselHeaderPropTypes) => {
   return (
     <div className="carousel-header">

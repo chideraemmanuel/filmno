@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import "./MobileSearch.scss";
-import { FaTrash, FaSearch, FaArrowLeft } from "react-icons/fa";
+import { FaSearch, FaArrowLeft } from "react-icons/fa";
 import { searchContext } from "../../../../contexts/searchContext";
 import { useNavigate } from "react-router-dom";
 
 const MobileSearch = () => {
-  const { isSearchActive, setIsSearchActive, searchTerm, setSearchTerm } =
+  const { setIsSearchActive, searchTerm, setSearchTerm } =
     useContext(searchContext);
 
   const navigate = useNavigate();

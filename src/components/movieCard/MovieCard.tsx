@@ -1,39 +1,12 @@
 import "./MovieCard.scss";
-import poster from "../../assets/poster.jpg";
-import { AiOutlinePlus, AiFillStar } from "react-icons/ai";
+import { AiOutlinePlus } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { wishListContext } from "../../contexts/wishListContext";
-import {
-  carouselCardPropTypes,
-  wishListTypes,
-} from "../../utilities/componentsTypes";
+import { carouselCardPropTypes } from "../../utilities/componentsTypes";
 import getPosterUrl from "../../utilities/getPosterUrl";
 import Rating from "../rating/Rating";
 
-// interface carouselCardPropTypes {
-//   item: {
-//     id: number;
-//   };
-// }
-
 const MovieCard = ({ data: movie }: carouselCardPropTypes) => {
-  // const posterUrl = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
   const posterUrl = getPosterUrl(movie.poster_path);
-  const { wishList, setWishList } = useContext(wishListContext);
-
-  const addToWishList = (id: number) => {
-    wishList.map((wishListItem: any) => {
-      if (wishListItem.id === id) {
-        return;
-        // already in wishlist
-      } else {
-        // setWishList([...wishList, item]);
-        console.log(id);
-      }
-    });
-    console.log(id);
-  };
 
   return (
     <div

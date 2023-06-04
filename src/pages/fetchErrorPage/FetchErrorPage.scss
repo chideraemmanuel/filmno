@@ -4,7 +4,6 @@
   justify-content: center;
   gap: 50px;
   height: calc(100vh - 110px);
-  // max-width: var(--max-width);
   padding: 0 20px;
 
   @media screen and (max-width: 1024px) {
@@ -66,14 +65,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 1024px) {
-//   .not-found {
-//     flex-direction: column;
-//     gap: 30px;
-
-//     &__info {
-//       text-align: center;
-//     }
-//   }
-// }

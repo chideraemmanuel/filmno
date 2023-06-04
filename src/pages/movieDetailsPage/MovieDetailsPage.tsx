@@ -2,10 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./MovieDetailsPage.scss";
 import MovieDetails from "./components/movieDetails/MovieDetails";
-import Carousel from "../../components/carousel/Carousel";
 import MovieDetailsPageSkeleton from "../components/skeletons/movieDetailsPageSkeleton/MovieDetailsPageSkeleton";
-import axios from "axios";
-import { useQuery } from "react-query";
 import useFetchMovieDetails from "../../hooks/useFetchMovieDetails";
 import useFetchRelatedMovies from "../../hooks/useFetchRelatedMovies";
 import useFetchSimilarMovies from "../../hooks/useFetchSimilarMovies";
@@ -15,7 +12,7 @@ import CardGrid from "../../containers/cardGrid/CardGrid";
 const MovieDetailsPage = () => {
   const { id } = useParams();
 
-  const { data: movieDetails, isLoading, error } = useFetchMovieDetails(id);
+  const { data: movieDetails, isLoading } = useFetchMovieDetails(id);
   const { data: relatedMovies } = useFetchRelatedMovies(id);
   const { data: similarMovies } = useFetchSimilarMovies(id);
 
@@ -52,5 +49,3 @@ const MovieDetailsPage = () => {
 };
 
 export default MovieDetailsPage;
-
-// SHOW EITHER RECOMMENDATIONS OR SIMILAR MOVIES BASED ON LENGTH OF DATA RETURNED

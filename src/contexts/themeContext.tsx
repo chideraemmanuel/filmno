@@ -3,10 +3,6 @@ import { ContextProviderPropTypes } from "./utilities/contextTypes";
 
 export const themeContext = createContext<any>(null);
 
-// interface ThemeContextProviderPropTypes {
-//   children: React.ReactNode;
-// }
-
 export const ThemeContextProvider = ({
   children,
 }: ContextProviderPropTypes) => {

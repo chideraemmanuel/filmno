@@ -19,19 +19,6 @@ const fetchMovieDetails = ({ queryKey }: { queryKey: any[] }) => {
 };
 
 const useFetchMovieDetails = (id: any) => {
-  //   const fetchMovieDetails = () => {
-  //     return axios.get(`https://api.themoviedb.org/3/movie/${id}`, {
-  //       params: {
-  //         language: "en-US",
-  //         append_to_response: "video",
-  //       },
-  //       headers: {
-  //         accept: "application/json",
-  //         Authorization: `Bearer ${accessToken}`,
-  //       },
-  //     });
-  //   };
-
   const { data, isLoading, error } = useQuery(
     ["movie details", id],
     fetchMovieDetails

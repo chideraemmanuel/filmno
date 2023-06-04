@@ -5,12 +5,6 @@ import { FreeMode, Pagination } from "swiper";
 import MovieCard from "../movieCard/MovieCard";
 import { CarouselPropTypes } from "../../utilities/componentsTypes";
 
-// interface CarouselPropTypes {
-//   data: any[];
-//   carouselHeader: string;
-//   link?: string;
-// }
-
 const Carousel = ({ data, carouselHeader, link }: CarouselPropTypes) => {
   return (
     <section className="carousel">

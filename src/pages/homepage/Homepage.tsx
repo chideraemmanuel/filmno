@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import CardGrid from "../../containers/cardGrid/CardGrid";
 import PageHeader from "../components/pageHeader/PageHeader";
 import SubpageSkeleton from "../components/skeletons/subpageSkeleton/SubpageSkeleton";
@@ -6,8 +6,6 @@ import "./Homepage.scss";
 import FetchErrorPage from "../fetchErrorPage/FetchErrorPage";
 import Pagination from "../components/pagination/Pagination";
 import useFetchTrendingMovies from "../../hooks/useFetchTrendingMovies";
-import axios from "axios";
-import { useQuery } from "react-query";
 import { filterAndPaginationContext } from "../../contexts/filterAndPaginationContext";
 
 const Homepage = () => {
