@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardGrid from "../../containers/cardGrid/CardGrid";
 import NoSearchResults from "../../containers/noSearchResults/NoSearchResults";
@@ -37,6 +38,17 @@ const SearchResultsPage = () => {
     isLoading,
     error,
   } = useQuery(["movie search", searchTerm], fetchSearchResults);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    scrollUp();
+  }, [searchTerm]);
 
   return (
     <div className="search-results-page">

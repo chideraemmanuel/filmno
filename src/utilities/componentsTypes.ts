@@ -34,3 +34,11 @@ export interface PageHeaderPropTypes {
 export interface RatingPropTypes {
   rating: string;
 }
+
+export interface wishListTypes {
+  id: number;
+  title: string;
+  overview: string;
+  vote_average: string;
+  poster_path: string;
+}

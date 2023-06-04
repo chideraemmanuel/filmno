@@ -3,29 +3,37 @@
   align-items: center;
   gap: 10px;
 
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+  }
+
   > span {
     font-size: var(--font-size);
+    color: var(--dark-grey);
   }
 
   select {
-    background-color: red;
-    color: white;
+    // background-color: var(--grey);
+    // color: var(--dark-grey);
+    background-color: var(--primary-color);
+    color: #fff;
     padding: 5px;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
 
+    @media screen and (max-width: 820px) {
+      // width: 100px;
+      font-size: var(--font-size);
+    }
+
     &:focus {
-      border: 1px solid blue;
+      box-shadow: 0 0 10px var(--primary-color);
     }
     option {
       font-size: var(--font-size);
-      background-color: yellow;
+      // background-color: var(--grey);
       cursor: pointer;
-
-      &:hover {
-        background-color: blue;
-      }
     }
   }
 }

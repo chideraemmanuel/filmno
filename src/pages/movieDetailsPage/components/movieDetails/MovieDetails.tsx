@@ -25,8 +25,8 @@ const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
           </div>
 
           <div className="movie-details__info--header_genres">
-            {movie.genres.map((genre) => (
-              <span>{genre.name}</span>
+            {movie.genres.map((genre, index) => (
+              <span key={index}>{genre.name}</span>
             ))}
           </div>
         </div>
@@ -53,7 +53,13 @@ const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
         </div>
 
         <div className="movie-details__info--buttons">
-          <button>Add to watchlist</button>
+          <button
+            onClick={() =>
+              alert(`Sorry, this functionality isn't available yet.`)
+            }
+          >
+            Add to watchlist
+          </button>
         </div>
       </div>
     </div>

@@ -4,8 +4,12 @@ import { AiOutlinePlus, AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { wishListContext } from "../../contexts/wishListContext";
-import { carouselCardPropTypes } from "../../utilities/componentsTypes";
+import {
+  carouselCardPropTypes,
+  wishListTypes,
+} from "../../utilities/componentsTypes";
 import getPosterUrl from "../../utilities/getPosterUrl";
+import Rating from "../rating/Rating";
 
 // interface carouselCardPropTypes {
 //   item: {
@@ -43,11 +47,13 @@ const MovieCard = ({ data: movie }: carouselCardPropTypes) => {
           {movie.title}
         </Link>
         <div className="movie-card__info--bottom">
-          <div className="movie-card__info--bottom_rating">
-            <AiFillStar />
-            <span>{parseFloat(movie.vote_average).toFixed(1)}</span>
-          </div>
-          <AiOutlinePlus onClick={() => addToWishList(2)} />
+          <Rating rating={parseFloat(movie.vote_average).toFixed(1)} />
+
+          <AiOutlinePlus
+            onClick={() =>
+              alert(`Sorry, this functionality isn't available yet.`)
+            }
+          />
         </div>
       </div>
     </div>

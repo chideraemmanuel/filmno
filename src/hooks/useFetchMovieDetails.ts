@@ -37,6 +37,10 @@ const useFetchMovieDetails = (id: any) => {
     fetchMovieDetails
   );
 
+  if (error) {
+    throw Error("Page not found");
+  }
+
   return { data, isLoading, error };
 };
 

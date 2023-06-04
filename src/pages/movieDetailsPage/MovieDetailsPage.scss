@@ -1,0 +1,9 @@
+.movie-details-page {
+  min-height: calc(100vh - 110px);
+
+  &__related,
+  &__similar {
+    padding: 0 20px;
+    margin-top: 10px;
+  }
+}

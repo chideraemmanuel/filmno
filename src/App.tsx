@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./App.scss";
 import {
   RouterProvider,
@@ -21,6 +21,7 @@ import SearchResultsPage from "./pages/searchResultsPage/SearchResultsPage.tsx";
 import LoginPage from "./pages/loginPage/LoginPage.tsx";
 import NotFoundPage from "./pages/notFoundPage/NotFoundPage.tsx";
 import Homepage from "./pages/homepage/Homepage.tsx";
+import { wishListContext } from "./contexts/wishListContext.tsx";
 
 const App = () => {
   const { theme, setTheme } = useContext(themeContext);
@@ -29,7 +30,11 @@ const App = () => {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Homepage />} />
-        <Route path="movie/:id" element={<MovieDetailsPage />} />
+        <Route
+          path="movie/:id"
+          element={<MovieDetailsPage />}
+          errorElement={<NotFoundPage />}
+        />
         <Route path="search/:searchTerm" element={<SearchResultsPage />} />
         <Route path="login" element={<LoginPage />} />
 

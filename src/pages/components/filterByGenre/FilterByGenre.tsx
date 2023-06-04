@@ -11,7 +11,7 @@ const FilterByGenre = () => {
   );
 
   // console.log(genre);
-  console.log(genreId);
+  // console.log(genreId);
 
   return (
     <div className="filter-by-genre">
@@ -25,7 +25,9 @@ const FilterByGenre = () => {
         <option value="">All</option>
 
         {data?.data.genres.map((genre: { name: string; id: number }) => (
-          <option value={genre.id}>{genre.name}</option>
+          <option key={genre.id} value={genre.id}>
+            {genre.name}
+          </option>
         ))}
       </select>
     </div>

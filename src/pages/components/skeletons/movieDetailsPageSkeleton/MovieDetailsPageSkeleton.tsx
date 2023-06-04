@@ -32,8 +32,8 @@ const MovieDetailsPageSkeleton = () => {
       <CarouselHeaderSkeleton />
       <br />
       <div className="movie-details-page-skeleton__carousel">
-        {numbers.map((_number) => (
-          <MovieCardSkeleton />
+        {numbers.map((_number, index) => (
+          <MovieCardSkeleton key={index} />
         ))}
       </div>
     </div>

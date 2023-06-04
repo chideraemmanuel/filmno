@@ -55,7 +55,7 @@
         &:hover,
         &:active,
         &:focus {
-          background-color: rgba($color: #ad241b, $alpha: 0.1);
+          background-color: rgba($color: rgb(247, 83, 29), $alpha: 0.1);
           color: var(--primary-color);
         }
 

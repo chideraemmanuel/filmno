@@ -15,8 +15,9 @@ const MobileSearch = () => {
   };
 
   const handleSearchSubmit = (e?: React.FormEvent<HTMLFormElement>) => {
+    e?.preventDefault();
+
     if (searchTerm.length > 0) {
-      e?.preventDefault();
       clearSearchInput();
       setIsSearchActive(false);
       // NAVIGATE TO SEARCH RESULTS PAGE

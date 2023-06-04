@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./GithubLink.scss";
 import { FiGithub } from "react-icons/fi";
+import { BsGithub } from "react-icons/bs";
 
 const GithubLink = () => {
   return (
@@ -9,7 +10,7 @@ const GithubLink = () => {
       target="_blank"
       className="github-link"
     >
-      <FiGithub />
+      <BsGithub />
     </Link>
   );
 };
