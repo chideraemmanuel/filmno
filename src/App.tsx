@@ -53,5 +53,3 @@ const App = () => {
 };
 
 export default App;
-
-// CHANGE ILLUSTRATIONS TO CURRENT COLOR

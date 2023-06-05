@@ -32,6 +32,10 @@ const MovieDetails = ({ data: movie }: carouselCardPropTypes) => {
           </p>
         </div>
 
+        <span className="movie-details__info--status">
+          Status: {movie.status}
+        </span>
+
         <div className="movie-details__info--buttons">
           <button
             onClick={() =>

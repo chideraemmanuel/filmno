@@ -55,7 +55,7 @@ const SearchResultsPage = () => {
       {searchResults?.data.results.length > 0 && (
         <div className="search-results-page__results">
           <PageHeader
-            pageHeader={`Results for ${searchTerm}:`}
+            pageHeader={`Results for ${searchTerm?.toUpperCase()}:`}
             filter={false}
           />
           <CardGrid data={searchResults?.data.results} />

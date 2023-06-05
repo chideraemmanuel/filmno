@@ -1,5 +1,5 @@
 import "./FetchErrorPage.scss";
-import fetchErrorIllustration from "../../assets/no-search-result2.svg";
+import fetchErrorIllustration from "../../assets/fetch-error.svg";
 
 const FetchErrorPage = () => {
   return (

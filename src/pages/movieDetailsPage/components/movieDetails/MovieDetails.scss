@@ -55,6 +55,11 @@
       }
     }
 
+    &--status {
+      color: var(--dark-grey);
+      font-size: var(--font-size);
+    }
+
     &--buttons {
       button {
         background-color: var(--primary-color);

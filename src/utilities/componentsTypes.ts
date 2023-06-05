@@ -16,6 +16,7 @@ export interface carouselCardPropTypes {
     overview: string;
     vote_average: string;
     poster_path: string;
+    status: string;
     genres: {
       name: string;
     }[];
