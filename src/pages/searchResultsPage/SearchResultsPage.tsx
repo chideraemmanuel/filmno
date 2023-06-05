@@ -29,11 +29,10 @@ const fetchSearchResults = ({ queryKey }: { queryKey: any[] }) => {
 const SearchResultsPage = () => {
   const { searchTerm } = useParams();
 
-  const {
-    data: searchResults,
-    isLoading,
-    error,
-  } = useQuery(["movie search", searchTerm], fetchSearchResults);
+  const { data: searchResults, isLoading } = useQuery(
+    ["movie search", searchTerm],
+    fetchSearchResults
+  );
 
   const scrollUp = () => {
     window.scrollTo({
