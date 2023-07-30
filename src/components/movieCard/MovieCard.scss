@@ -9,15 +9,17 @@
   padding: 20px 10px;
   transition: 0.5s ease;
 
-  &:hover .movie-card__overlay {
-    background-color: rgba($color: #000000, $alpha: 0.5);
-  }
+  // &:hover .movie-card__overlay {
+  //   background-color: rgba($color: #000000, $alpha: 0.5);
+  // }
 
   &__overlay {
     position: absolute;
     inset: 0;
     border-radius: 7px;
-    background-color: rgba($color: #000000, $alpha: 0.7);
+    cursor: pointer;
+    // background-color: rgba($color: #000000, $alpha: 0.7);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, #000000 100%);
     transition: 0.3s ease;
   }
 
